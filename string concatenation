@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class StringConcatenation {
+    
+    // Method to concatenate two strings
+    public static String concatenate(String str1, String str2) {
+        // Convert strings to character arrays
+        char[] chars1 = str1.toCharArray();
+        char[] chars2 = str2.toCharArray();
+        
+        // Create a new character array to hold the concatenated result
+        char[] concatenatedChars = new char[chars1.length + chars2.length];
+        
+        // Copy the characters from the first string
+        for (int i = 0; i < chars1.length; i++) {
+            concatenatedChars[i] = chars1[i];
+        }
+        
+        // Copy the characters from the second string
+        for (int i = 0; i < chars2.length; i++) {
+            concatenatedChars[chars1.length + i] = chars2[i];
+        }
+        
+        // Convert the character array back to a string and return
+        return new String(concatenatedChars);
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Prompt the user for the first string
+        System.out.println("Enter the first string: ");
+        String firstString = scanner.nextLine();
+        
+        // Prompt the user for the second string
+        System.out.println("Enter the second string: ");
+        String secondString = scanner.nextLine();
+        
+        // Concatenate the strings using the custom method
+        String concatenatedResult = concatenate(firstString, secondString);
+        
+        // Print the concatenated result
+        System.out.println("Concatenated result: " + concatenatedResult);
+        
+        // Close the scanner
+        scanner.close();
+    }
+}
