@@ -1,4 +1,4 @@
-package com.samreen.jdbc;
+package com.poojitha.jdbc;
 	import java.sql.*;
 	public class JdbcDemo {
 
